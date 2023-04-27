@@ -16,6 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+
 # from orbils import views
 # from useraccount import views
 # from orbils_technology import views
@@ -25,7 +28,10 @@ from useraccount import views as useraccount_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', orbils_views.About,name='about'),
+    path('all-courses/', orbils_views.AllCourses,name='allcourses'),
+    path('events/', orbils_views.Events,name='events'),
+    path('contact-us/', orbils_views.ContactUs,name='contact-us'),
     path('login/', useraccount_views.LoginView,name='login'),
     path('logout/', useraccount_views.LogoutView,name='logout'),
     path('signup/', useraccount_views.SignUpView,name='signup'),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

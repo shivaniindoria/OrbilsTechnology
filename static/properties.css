@@ -1,0 +1,16 @@
+.absolute{
+    position:absolute;
+}
+.disabled {
+    cursor: not-allowed; 
+    pointer-events: none;
+} 
+.right{
+    float: right;
+} 
+.inline-block{
+    display:inline-block;
+}
+.display-flex{
+    display: flex;
+}

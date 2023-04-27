@@ -1,0 +1,15 @@
+{% include "orbils/header.html" %}
+{% load static %}
+{% comment %} <h1>all the courses</h1> {% endcomment %}
+<br>
+{% for course in coursedata %}
+    <div class="courses-div display-flex">
+        <div><img class='courses-img' style='border-radius:8px 8px 0 0 ;' src="/media/{{course.courseimg}}" alt="wert"></div>
+        <div class="inline-block">
+            {{ course.coursename }} <br>
+            {{ course.description }}
+        </div>
+        
+    </div>
+{% endfor %}
+{% include "orbils/footer.html" %}

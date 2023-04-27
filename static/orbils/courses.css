@@ -1,0 +1,12 @@
+.courses-div{
+    height: 40vh;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px -2px black;
+    width: 70vw;
+    margin: 10px 10px;
+    background-color: #ded2e7;
+}
+.courses-img{
+    height: 40vh;
+    width: 20vw;
+}

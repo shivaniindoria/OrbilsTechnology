@@ -1,0 +1,110 @@
+{% include "orbils/header.html" %}
+    <div class="container" style="margin-top:70px;"><h3>Contact us for any Querry</h3><hr>
+        <form class="row g-3" action="{% url "contact-us" %}" method="POST">
+            {% csrf_token %}
+            <div class="col-md-6">
+                <label for="firstname" class="form-label">First Name:</label>
+                <input type="text" name="firstname" class="form-control" id="firstname">
+            </div>
+            <div class="col-md-6">
+                <label for="lastname" class="form-label">Last Name:</label>
+                <input type="text" name="lastname" class="form-control" id="lastname">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email:</label>
+                <input type="email" name="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+                <label for="number" class="form-label">Mobile Number:</label>
+                <input type="tel"  name="number" class="form-control" id="number">
+            </div>
+            <div class="col-12">
+                <label for="inputquerry" class="form-label">Querry/Issue:</label>
+                <textarea id="inputquerry" name="querry" class="form-control" rows="2"></textarea>
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Address:</label>
+                <input type="text" name="add1" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address 2:</label>
+                <input type="text" name="add2" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-3">
+                <label for="inputCountry" class="form-label">Country:</label>
+                <input type="text" name="country" class="form-control" id="inputCountry">
+
+                {% comment %} <select id="inputCountry" name="country" class="form-select">
+                    <!-- Options will be dynamically populated here -->
+                </select> {% endcomment %}
+            </div>
+            <div class="col-md-3">
+                <label for="inputState" class="form-label">State:</label>
+                <input type="text" name="state" class="form-control" id="inputState">
+
+                {% comment %} <select id="inputState" name="state" class="form-select">
+                    <!-- Options will be dynamically populated here -->
+                </select> {% endcomment %}
+            </div>
+            
+            <div class="col-md-3">
+                <label for="inputCity" class="form-label">City:</label>
+                <input type="text" name="city" class="form-control" id="inputCity">
+
+                {% comment %} <select id="inputCity" name="city" class="form-select">
+                    <!-- Options will be dynamically populated here -->
+                </select> {% endcomment %}
+            </div>
+            
+            {% comment %} https://places.googleapis.com/v1/places/GyuEmsRBfy61i59si0?fields=addressComponents&key=AIzaSyBSSVFtIQoTX5_eft5MVJizfSjEGp-XtgM {% endcomment %}
+            <div class="col-md-3">
+                <label for="inputZip" class="form-label">Zip:</label>
+                <input type="text"  name="zip" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-dark">Send</button>
+                </div><hr>
+          </form>
+    </div>
+    {% comment %} <script>
+        // Function to fetch data from Google Places API
+        function fetchData(url, selectElement) {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Clear existing options
+                    selectElement.innerHTML = '';
+                    
+                    // Populate dropdown options
+                    data.results.forEach(item => {
+                        const option = document.createElement('option');
+                        option.value = item.id; // Adjust if your API returns IDs
+                        option.text = item.name; // Adjust if your API returns names
+                        selectElement.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+    
+        // Fetch countries and populate the country dropdown
+        const countrySelect = document.getElementById('inputCountry');
+        fetchData('https://places.googleapis.com/v1/places?fields=addressComponents&key=AIzaSyBSSVFtIQoTX5_eft5MVJizfSjEGp-XtgM', countrySelect);
+    
+        // Event listener to fetch states when a country is selected
+        countrySelect.addEventListener('change', function() {
+            const selectedCountry = this.value;
+            const stateSelect = document.getElementById('inputState');
+            fetchData(`https://places.googleapis.com/v1/places/${selectedCountry}/states?fields=addressComponents&key=AIzaSyBSSVFtIQoTX5_eft5MVJizfSjEGp-XtgM`, stateSelect);
+        });
+    
+        // Event listener to fetch cities when a state is selected
+        const stateSelect = document.getElementById('inputState');
+        stateSelect.addEventListener('change', function() {
+            const selectedState = this.value;
+            const citySelect = document.getElementById('inputCity');
+            fetchData(`https://places.googleapis.com/v1/places/${selectedState}/cities?fields=addressComponents&key=AIzaSyBSSVFtIQoTX5_eft5MVJizfSjEGp-XtgM`, citySelect);
+        });
+    </script> {% endcomment %}
+{% include "orbils/footer.html" %}
