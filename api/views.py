@@ -12,5 +12,6 @@ class DumpItApi(APIView):
         return Response(response_data,status=status.HTTP_200_OK)
 
     def post(self,request):
-        response_data = {'response':'hello,it is a post method'}
+        name=request.data.get('name')
+        response_data = {'name':name}
         return Response(response_data,status=status.HTTP_200_OK)
