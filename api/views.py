@@ -1,5 +1,6 @@
 from rest_framework import status 
 from rest_framework.views import APIView, Response 
+from api.models import item
 
 class DumpItApi(APIView):
     def get(self,request):
