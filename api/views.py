@@ -1,15 +1,17 @@
 from rest_framework import status 
 from rest_framework.views import APIView, Response 
-from api.models import item
+from api.models import Item
+from .serializers import ItemSerializers 
 
 class DumpItApi(APIView):
     def get(self,request):
-        items = item.objects.all()
-        response_data = {"datas":items}
-        return Response(response_data,status=status.HTTP_200_OK)
+        items = Item.objects.all()
+        items_data = ItemSerializers(items,many=True).data
+        response_data = {"datas":items_data}
+        return Response(response_data, status=status.HTTP_200_OK)
 
     def post(self,request):
         name=request.data.get('name')
-        item.objects.create(name=name)
+        Item.objects.create(name=name)
         response_data = {'response':'item created'}
-        return Response(response_data,status=status.HTTP_200_OK)
+        return Response(response_data, status=status.HTTP_200_OK)
