@@ -10,7 +10,7 @@ notify-py==0.3.42
 pillow>=9.4.0,<10.3.0
 python-dotenv>=0.21,<1.0.1
 requests==2.31.0
-sqlparse==0.5.0
+sqlparse>=0.4,<0.5.0
 tzdata==2024.1
 urllib3==2.2.1
 win32-setctime==1.1.0
