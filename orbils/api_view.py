@@ -11,6 +11,16 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import requests
+       
+class RandomQuoteAPIView(APIView):
+    def get(self, request):
+        url = "https://api.quotable.io/random"
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json()
+            return Response({"content": data.get('content', 'No Quote available.')})
+        else:
+            return Response({"content": "Failed to fetch Quote."})
 
 class FunFactAPIView(APIView):
     def get(self, request):
@@ -22,13 +32,3 @@ class FunFactAPIView(APIView):
             return Response({"text": data.get('text', 'No fun fact available.')})
         else:
             return Response({"text": "Failed to fetch fun fact."})
-        
-class RandomQuoteAPIView(APIView):
-    def get(self, request):
-        url = "https://api.quotable.io/random"
-        response = requests.get(url)
-        if response.status_code == 200:
-            data = response.json()
-            return Response({"content": data.get('content', 'No Quote available.')})
-        else:
-            return Response({"content": "Failed to fetch Quote."})
