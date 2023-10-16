@@ -5,15 +5,15 @@ from .models import Contact, Courses
 def About(request):
     coursedata = Courses.objects.values()
     for item in coursedata:
-        print(item)
-    return render(request,'orbils/about.html',{"coursedata": coursedata})
+        # print(item)
+        return render(request,'orbils/about.html',{"coursedata": coursedata})
 # def ContactUs(request):
 #     return render(request,'orbils/contact-us.html')
 def AllCourses(request):
     coursedata = Courses.objects.values()
     for item in coursedata:
-        print(item)
-    return render(request,'orbils/allcourses.html',{"coursedata": coursedata})
+        # print(item)
+        return render(request,'orbils/allcourses.html',{"coursedata": coursedata})
 def Events(request):
     return render(request,'orbils/events.html')
 def ContactUs(request):

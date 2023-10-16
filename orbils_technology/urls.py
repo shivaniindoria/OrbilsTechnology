@@ -22,13 +22,17 @@ from django.conf.urls.static import static
 # from orbils import views
 # from useraccount import views
 # from orbils_technology import views
+# from orbils.api_view import FunFactAPIView
+from orbils.api_view import *
+
 from orbils import views as orbils_views
 from useraccount import views as useraccount_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),
     path('', orbils_views.About,name='about'),
+    path('api/fun-fact/', FunFactAPIView.as_view()),
+    path('api/quote/', RandomQuoteAPIView.as_view()),
     path('all-courses/', orbils_views.AllCourses,name='allcourses'),
     path('events/', orbils_views.Events,name='events'),
     path('contact-us/', orbils_views.ContactUs,name='contact-us'),

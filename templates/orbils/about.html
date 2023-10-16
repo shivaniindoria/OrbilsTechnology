@@ -39,7 +39,11 @@
         <a href="{% url "signup" %}"><button>REGISTER NOW</button></a>
     </div>
 </div>
-
+<section id="Quote-section">
+    <h2>Quote:</h2>
+    <p id="Quote-text">Loading...</p>
+    <button onclick="fetchQuote()">Get New Quote</button>
+</section>
 <div class='courses'>
     <p>Popular Courses</p>
     <h1>Our Popular Courses</h1>
@@ -68,7 +72,11 @@
     <p>Feedback</p>
     <main></main>
 </div>
-
+<section id="fun-fact-section">
+    <h2>Fun Fact:</h2>
+    <p id="fun-fact-text">Loading...</p>
+    <button onclick="fetchFunFact()">Get New Fact</button>
+</section>
 <div>
     news letter
     
@@ -85,4 +93,26 @@
           
     <div></div>
 </div>
+<script>
+    function fetchFunFact() {
+        fetch('/api/fun-fact/')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('fun-fact-text').textContent = data.text;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    window.onload = fetchFunFact;
+    function fetchQuote() {
+        fetch('/api/quote/')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('Quote-text').textContent = data.content;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    window.onload = fetchQuote;
+</script>
 {% endblock %}

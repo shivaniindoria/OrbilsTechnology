@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'orbils',
     'useraccount',
     'rest_framework',
-    'api',
     # 'tinymce',
 ]
 
