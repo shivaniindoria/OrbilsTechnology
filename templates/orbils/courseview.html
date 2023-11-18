@@ -1,7 +1,7 @@
 {% include "orbils/header.html" %}
 {% load static %}
-<div class="container" style='display:flex;'>
-    <div style='display:inline-block;'>
+<div class="container d-flex">
+    <div class="col">
 
         <div class="col-md-10">
             <h5>{{course.coursename}}</h5><br>
@@ -15,7 +15,7 @@
         </div>
 
     </div>
-    <div class="absolute" style='position:relative;display:inline-block;top:-53px;width:25vw;border:1px solid #EEEEBB;background-color:#FEFEFE'>
+    <div class="absolute col" style='position:relative;top:-53px;width:25vw;border:1px solid #EEEEBB;background-color:#FEFEFE'>
         <img src="/media/{{course.courseimg}}" style="width:100%" class="" alt="...">
 adfdghjk
     </div>

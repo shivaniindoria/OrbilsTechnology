@@ -23,7 +23,7 @@
             <a class='login right link-nav header-link' href="{% url "login" %}"><img    width='14px' class="mx-1" src="{% static "orbils/images/login.png" %}">Login/Register</a>
             {% else %}
 
-            <li class="dropdown inline-block right" style="">
+            <div class="dropdown col right" style="">
                 <a class="dropdown-toggle link-nav header-link" style="font-size:15px;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     welcome {{request.user}}!
                     <img class="mx-2" src="{% static "useraccount/images/user.png" %}" style="border-radius:50%;" width='20px' alt="">
@@ -33,7 +33,7 @@
                   <li><a style="font-size:15px;" class="dropdown-item header-link" href="#">Another action</a></li>
                   <li><a style="font-size:15px;" class="dropdown-item header-link" href="{% url "logout" %}">logout</a></li>
                 </ul>
-            </li>
+            </div>
 
             {% endif %}
     </div>
