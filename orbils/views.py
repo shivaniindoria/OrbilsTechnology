@@ -7,15 +7,16 @@ def About(request):
     for item in coursedata:
         # print(item)
         return render(request,'orbils/about.html',{"coursedata": coursedata})
-# def ContactUs(request):
-#     return render(request,'orbils/contact-us.html')
+
 def AllCourses(request):
     coursedata = Courses.objects.values()
     for item in coursedata:
         # print(item)
         return render(request,'orbils/allcourses.html',{"coursedata": coursedata})
+
 def Events(request):
     return render(request,'orbils/events.html')
+
 def ContactUs(request):
     if (request.method == "POST"):
         firstname = request.POST['firstname']
@@ -32,3 +33,14 @@ def ContactUs(request):
         contact = Contact(firstname = firstname, lastname = lastname, email = email, number = phone, querry = querry, add1 = add1, add2 = add2, country = country, city = city, state = state, zip = zip)
         contact.save()
     return render(request,'orbils/contact-us.html')
+
+def CourseView(request, myid):
+    #fetch the product using id
+    course = Courses.objects.filter(courseId=myid)
+    print(course)
+    return render(request,'orbils/courseview.html', {'course':course[0]})
+
+def CartView(request,myid):
+    course = Courses.objects.filter(courseId=myid)
+    print(course)
+    return render(request,'orbils/cart-view.html',{'course':course[0]})

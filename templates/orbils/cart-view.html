@@ -1,0 +1,15 @@
+{% include "orbils/header.html" %}
+{% if datas %}
+<div id="cart-item-view">
+    {% comment %} {% for item in datas %}
+    <li>{{ item.name }}</li> <!-- Access attributes of your model object -->
+    {% endfor %} {% endcomment %}
+    {% for key, value in cart_data.items %}
+        <div>{{ key }}: {{ value }}</div>
+    {% endfor %}
+</div>
+{% else %}
+empty cart
+
+{% endif %}
+{% include "orbils/footer.html" %}

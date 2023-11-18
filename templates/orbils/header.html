@@ -8,39 +8,44 @@
     <link rel="stylesheet" href="{% static "orbils/style.css" %}">
     <link rel="stylesheet" href="{% static "orbils/courses.css" %}">
     <link rel="stylesheet" href="{% static "properties.css" %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class='contact-us' style="width: 100%;height: 45vh;background-image: url(/static/orbils/images/contact-cover.png);background-repeat: no-repeat; background-size: cover;">
     <div class='header absolute'>
-        <a class='disabled link mt-1' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/location.png" %}"><img src="" alt=""><span>2364, Tehsil Camp, Panipat-132103, Haryana(India)</span></a>
-        <a class='disabled link mt-2' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/website.png" %}"><img src="" alt="">orbilstechnology@gmail.com.com</a>
-        <a class='disabled link' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/timing.png" %}"><img src="" alt="">Mon-Fri: 10:00 am - 5:00 pm</a>
+        <a class='disabled link-nav mt-1 header-link' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/location.png" %}"><img src="" alt=""><span>2364, Tehsil Camp, Panipat-132103, Haryana(India)</span></a>
+        <a class='disabled link-nav mt-2 header-link' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/website.png" %}"><img src="" alt="">orbilstechnology@gmail.com.com</a>
+        <a class='disabled link-nav header-link' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/timing.png" %}"><img src="" alt="">Mon-Fri: 10:00 am - 5:00 pm</a>
         {% if not user.is_authenticated %}
-        <a class='login right link' href="{% url "login" %}"><img    width='14px' class="mx-1" src="{% static "orbils/images/login.png" %}">Login/Register</a>
-        {% else %}
-        <li class="dropdown inline-block right ">
-            <a class="btn dropdown-toggle" href="#" role="button" id="nav-dropdown" data-toggle="dropdown" aria-expanded="false">
-                welcome {{request.user}}!
-                <img class="mx-2" src="{% static "useraccount/images/user.png" %}" style="border-radius:50%;" width='20px' alt="">
-            </a>
-            <div class="dropdown-menu" aria-labelledby="nav-dropdown">
-              <a class="dropdown-item" href="#">profile</a>
-              <a class="dropdown-item" href="#">Settings</a>
-              <a class="dropdown-item" href="{% url "logout" %}">logout</a>
-            </div>
-          </li>
-        {% endif %}
+            <a class='login right link-nav header-link' href="{% url "login" %}"><img    width='14px' class="mx-1" src="{% static "orbils/images/login.png" %}">Login/Register</a>
+            {% else %}
+
+            <li class="dropdown inline-block right" style="">
+                <a class="dropdown-toggle link-nav header-link" style="font-size:15px;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    welcome {{request.user}}!
+                    <img class="mx-2" src="{% static "useraccount/images/user.png" %}" style="border-radius:50%;" width='20px' alt="">
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a style="font-size:15px;" class="dropdown-item header-link" href="#">Action</a></li>
+                  <li><a style="font-size:15px;" class="dropdown-item header-link" href="#">Another action</a></li>
+                  <li><a style="font-size:15px;" class="dropdown-item header-link" href="{% url "logout" %}">logout</a></li>
+                </ul>
+            </li>
+
+            {% endif %}
     </div>
     <div class='main-header absolute'>
         <div class='logo'><img width='200px' src="{% static "orbils/images/orbils-removebg.png" %}" alt=""></div>
         <div class='link-bar right '>
-            <a class='home-link link' href="/">About</a>
-            <a class='home-link link' href="{% url "allcourses" %}">Courses</a>
-            <a class='home-link link' href="{% url "events" %}">Events</a>
-            <a class='home-link link' href="">Services</a>
-            <a class='home-link link' href="">Blog</a>
-            <a class='home-link link' href="{% url "contact-us" %}">Contact Us</a>
+            <a class='home-link' href="/">About</a>
+            <a class='home-link' href="{% url "allcourses" %}">Courses</a>
+            <a class='home-link' href="{% url "events" %}">Events</a>
+            <a class='home-link' href="">Services</a>
+            <a class='home-link' href="">Blog</a>
+            <a class='home-link' href="{% url "contact-us" %}">Contact Us</a>
         </div>
     </div>
-</div> 
+</div>

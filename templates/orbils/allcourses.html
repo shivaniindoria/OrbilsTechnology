@@ -1,15 +1,41 @@
 {% include "orbils/header.html" %}
 {% load static %}
-{% comment %} <h1>all the courses</h1> {% endcomment %}
 <br>
-{% for course in coursedata %}
-    <div class="courses-div display-flex">
-        <div><img class='courses-img' style='border-radius:8px 8px 0 0 ;' src="/media/{{course.courseimg}}" alt="wert"></div>
-        <div class="inline-block">
-            {{ course.coursename }} <br>
-            {{ course.description }}
+<div class="container">
+    <h1>all the courses</h1>
+    {% for course in coursedata %}
+      {% if forloop.counter0|divisibleby:2 %}
+        <div class="row">
+      {% endif %}
+      <div class="col-md-6">
+        <!-- Course Card -->
+        <div class="card">
+          <div class="mb-3" style="max-width: 540px; ">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="/media/{{course.courseimg}}" style="width:40vw;" class="img-fluid rounded-start courses-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{course.coursename}}</h5>
+                  <p class="card-text">{{course.description}}</p>
+                  <button id="addToCartButton" onclick="addToCart()" class="btn btn-dark">Add to Cart</button>
+
+                  {% comment %} <button type="button" class="btn btn-outline-success">add to cart</button> {% endcomment %}
+                  <a href="../all-courses/orbils/course/{{course.courseId}}" type="button" class="btn btn-primary" href="">view details</a>
+
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        
-    </div>
-{% endfor %}
+      </div>
+      {% if forloop.last or forloop.counter0|add:"1"|divisibleby:2 %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+
 {% include "orbils/footer.html" %}

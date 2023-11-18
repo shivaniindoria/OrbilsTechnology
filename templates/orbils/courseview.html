@@ -1,0 +1,23 @@
+{% include "orbils/header.html" %}
+{% load static %}
+<div class="container" style='display:flex;'>
+    <div style='display:inline-block;'>
+
+        <div class="col-md-10">
+            <h5>{{course.coursename}}</h5><br>
+            <p>{{course.description}}</p><br>
+            <p><h4 class="d-inline-flex"><b> &#8377;{{course.discounted_price}}</b></h4><h6 class="d-inline-flex mx-2"> original price <strike class="mx-1"> &#8377;{{course.original_price}} </strike></h6><h5 class="d-inline-flex"> {{course.discounted_percentage}}&percnt; OFF</h5></p>
+            <div>
+                <button class="btn btn-dark m-3">Buy Now</button>
+                <button id="addToCartButton" onclick="addToCart()" class="btn btn-dark">Add to Cart</button>
+                <a id="goToCartLink"  onclick="loadCart()" href="{% url "cartview" myid=course.courseId %}" class="d-none" style="text-decoration:none;color:rgb(0, 81, 255);font-weight:500;margin:0px 5px">Go to Cart</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="absolute" style='position:relative;display:inline-block;top:-53px;width:25vw;border:1px solid #EEEEBB;background-color:#FEFEFE'>
+        <img src="/media/{{course.courseimg}}" style="width:100%" class="" alt="...">
+adfdghjk
+    </div>
+</div>
+{% include "orbils/footer.html" %}
