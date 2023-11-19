@@ -54,7 +54,7 @@
             <img class= 'course-img' width=250px height=150px style='border-radius:8px 8px 0 0 ;' src="/media/{{course.courseimg}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{ course.coursename }}</h5>
-              <div style=""><img src="{% static "orbils/images/star.png" %}" alt="">
+              <div><img src="{% static "orbils/images/star.png" %}" alt="">
                 <img src="{% static "orbils/images/star.png" %}" alt="">
                 <img src="{% static "orbils/images/star.png" %}" alt="">
                 <img src="{% static "orbils/images/star.png" %}" alt="">
@@ -77,8 +77,8 @@
 </div>
 <div class='feedback text-center mx-auto'>
     <p>Feedback</p>
-    <main style="" class="container d-flex">
-        <div id="carouselExampleIndicators" class="carousel slide feedback-carousel" data-bs-ride="carousel" data-bs-interval="3000" style="">
+    <main class="container d-flex">
+        <div id="carouselExampleIndicators" class="carousel slide feedback-carousel" data-bs-ride="carousel" data-bs-interval="3000">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -111,7 +111,7 @@
             <label for="exampleFormControlInput1" class="form-label"><b>@{{request.user}}</b></label>
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="your feedbaack here">
         </div>
-        <button type="submit" class="btn btn-primary mb-5" style="">Contribute Now</button>
+        <button type="submit" class="btn btn-primary mb-5">Contribute Now</button>
 
         </div>
     </div>
@@ -123,20 +123,14 @@
     <button class="btn btn-primary" onclick="fetchFunFact()">Get New Fact</button>
 
 </div>
-<div class="" style="">
-    <div style="width:50vw;margin:auto;">
+<div class="mx-auto w-50">
     news letter
     <div class="mb-3 ">
         <label for="exampleFormControlInput1" class="form-label">Email address</label>
         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
     </div>
-    <button type="submit" class="btn btn-primary mb-5" style="">Subscribe</button>
+    <button type="submit" class="btn btn-primary mb-5">Subscribe</button>
 
-    </div>
-    {% comment %} {% for item in coursedata %}
-        <img src="/media/{{item.courseimg}}" alt="">
-        <li>{{ item.coursename }}</li>
-    {% endfor %} {% endcomment %}
 </div>
 
 {% endblock %}

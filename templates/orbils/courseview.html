@@ -1,7 +1,7 @@
 {% include "orbils/header.html" %}
 {% load static %}
 <div class="container d-flex">
-    <div class="col">
+    <div class="inline-block">
 
         <div class="col-md-10">
             <h5>{{course.coursename}}</h5><br>
@@ -10,13 +10,13 @@
             <div>
                 <button class="btn btn-dark m-3">Buy Now</button>
                 <button id="addToCartButton" onclick="addToCart()" class="btn btn-dark">Add to Cart</button>
-                <a id="goToCartLink"  onclick="loadCart()" href="{% url "cartview" myid=course.courseId %}" class="d-none" style="text-decoration:none;color:rgb(0, 81, 255);font-weight:500;margin:0px 5px">Go to Cart</a>
+                <a id="goToCartLink"  onclick="loadCart()" href="{% url "cartview" myid=course.courseId %}" class="d-none text-decoration-none" style="color:rgb(0, 81, 255);font-weight:500;margin:0px 5px">Go to Cart</a>
             </div>
         </div>
 
     </div>
-    <div class="absolute col" style='position:relative;top:-53px;width:25vw;border:1px solid #EEEEBB;background-color:#FEFEFE'>
-        <img src="/media/{{course.courseimg}}" style="width:100%" class="" alt="...">
+    <div class="absolute inline-block w-25" style='position:relative;top:-53px;border:1px solid #EEEEBB;background-color:#FEFEFE'>
+        <img src="/media/{{course.courseimg}}" style="width:100%">
 adfdghjk
     </div>
 </div>

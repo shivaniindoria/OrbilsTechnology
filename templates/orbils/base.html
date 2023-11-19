@@ -14,18 +14,18 @@
 <body>
     <div class=' home-bg-image'>
         <div class='header text-center'>
-            <a class='disabled-link text-white text-decoration-none mt-1 header-link' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/location.png" %}"><img src="" alt=""><span>2364, Tehsil Camp, Panipat-132103, Haryana(India)</span></a>
-            <a class='disabled-link text-white text-decoration-none mt-2 header-link' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/website.png" %}"><img src="" alt="">orbilstechnology@gmail.com.com</a>
-            <a class='disabled-link text-white text-decoration-none header-link' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/timing.png" %}"><img src="" alt="">Mon-Fri: 10:00 am - 5:00 pm</a>
+            <a class='disabled-link text-white text-decoration-none mt-1 header-link'><img width='14px' class="mx-1" src="{% static "orbils/images/location.png" %}"><img src="" alt=""><span>2364, Tehsil Camp, Panipat-132103, Haryana(India)</span></a>
+            <a class='disabled-link text-white text-decoration-none mt-2 header-link'><img width='14px' class="mx-1" src="{% static "orbils/images/website.png" %}"><img src="" alt="">orbilstechnology@gmail.com.com</a>
+            <a class='disabled-link text-white text-decoration-none header-link'><img width='14px' class="mx-1" src="{% static "orbils/images/timing.png" %}"><img src="" alt="">Mon-Fri: 10:00 am - 5:00 pm</a>
 
             {% if not user.is_authenticated %}
             <a class='me-5 right text-white text-decoration-none header-link' href="{% url "login" %}"><img    width='14px' class="mx-1" src="{% static "orbils/images/login.png" %}">Login/Register</a>
             {% else %}
 
-            <div class="dropdown col right" style="">
+            <div class="dropdown col right">
                 <a class="dropdown-toggle text-white text-decoration-none header-link" style="font-size:15px;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     welcome {{request.user}}!
-                    <img class="mx-2" src="{% static "useraccount/images/user.png" %}" style="border-radius:50%;" width='20px' alt="">
+                    <img class="mx-2 rounded-circle" src="{% static "useraccount/images/user.png" %}"  width='20px' alt="">
                 </a>
                 <ul class="dropdown-menu">
                   <li><a style="font-size:15px;" class="dropdown-item header-link" href="#">Action</a></li>
