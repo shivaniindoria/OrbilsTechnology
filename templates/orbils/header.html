@@ -15,16 +15,16 @@
   </head>
   <body>
     <div class='contact-us' style="width: 100%;height: 45vh;background-image: url(/static/orbils/images/contact-cover.png);background-repeat: no-repeat; background-size: cover;">
-    <div class='header absolute'>
-        <a class='disabled link-nav mt-1 header-link' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/location.png" %}"><img src="" alt=""><span>2364, Tehsil Camp, Panipat-132103, Haryana(India)</span></a>
-        <a class='disabled link-nav mt-2 header-link' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/website.png" %}"><img src="" alt="">orbilstechnology@gmail.com.com</a>
-        <a class='disabled link-nav header-link' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/timing.png" %}"><img src="" alt="">Mon-Fri: 10:00 am - 5:00 pm</a>
+    <div class='header text-center absolute'>
+        <a class='disabled-link text-white text-decoration-none mt-1 header-link' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/location.png" %}"><img src="" alt=""><span>2364, Tehsil Camp, Panipat-132103, Haryana(India)</span></a>
+        <a class='disabled-link text-white text-decoration-none mt-2 header-link' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/website.png" %}"><img src="" alt="">orbilstechnology@gmail.com.com</a>
+        <a class='disabled-link text-white text-decoration-none header-link' href=""><img width='14px' class="mx-1" src="{% static "orbils/images/timing.png" %}"><img src="" alt="">Mon-Fri: 10:00 am - 5:00 pm</a>
         {% if not user.is_authenticated %}
-            <a class='login right link-nav header-link' href="{% url "login" %}"><img    width='14px' class="mx-1" src="{% static "orbils/images/login.png" %}">Login/Register</a>
+            <a class='me-4 right text-white text-decoration-none header-link' href="{% url "login" %}"><img    width='14px' class="mx-1" src="{% static "orbils/images/login.png" %}">Login/Register</a>
             {% else %}
 
             <div class="dropdown col right" style="">
-                <a class="dropdown-toggle link-nav header-link" style="font-size:15px;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="dropdown-toggle text-white text-decoration-none header-link" style="font-size:15px;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     welcome {{request.user}}!
                     <img class="mx-2" src="{% static "useraccount/images/user.png" %}" style="border-radius:50%;" width='20px' alt="">
                 </a>
@@ -37,15 +37,15 @@
 
             {% endif %}
     </div>
-    <div class='main-header absolute'>
-        <div class='logo'><img width='200px' src="{% static "orbils/images/orbils-removebg.png" %}" alt=""></div>
-        <div class='link-bar right '>
-            <a class='home-link' href="/">About</a>
-            <a class='home-link' href="{% url "allcourses" %}">Courses</a>
-            <a class='home-link' href="{% url "events" %}">Events</a>
-            <a class='home-link' href="">Services</a>
-            <a class='home-link' href="">Blog</a>
-            <a class='home-link' href="{% url "contact-us" %}">Contact Us</a>
+    <div class='main-header p-2 bg-white absolute'>
+        <div class='logo col'><img width='200px' src="{% static "orbils/images/orbils-removebg.png" %}" alt=""></div>
+        <div class='link-bar right'>
+            <a class='home-link text-dark text-decoration-none' href="/">About</a>
+            <a class='home-link text-dark text-decoration-none' href="{% url "allcourses" %}">Courses</a>
+            <a class='home-link text-dark text-decoration-none' href="{% url "events" %}">Events</a>
+            <a class='home-link text-dark text-decoration-none' href="">Services</a>
+            <a class='home-link text-dark text-decoration-none' href="">Blog</a>
+            <a class='home-link text-dark text-decoration-none' href="{% url "contact-us" %}">Contact Us</a>
         </div>
     </div>
 </div>

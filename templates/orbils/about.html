@@ -1,12 +1,12 @@
 {% extends "orbils/base.html" %}
 {% load static %}
 {% block content %}
-    <div class='search-bar'>
+    <div class='search-bar text-center bg-white'>
         <p>What are you looking for at the course?</p>
         <div>
             <input type="text" placeholder="Search by Keyword" name="" id="">
             <input type="select" name="" id="">
-            <button>SEARCH NOW</button>
+            <button class="text-white border-0">SEARCH NOW</button>
         </div>
     </div>
 
@@ -21,20 +21,20 @@
         <p class='l'>Save Time With Automation</p>
         <p class='l'>30+ Courses</p>
         <p class='ex'>*We Have 5+ Years of Working Experience</p>
-        <a href="{% url "allcourses" %}"><button>VIEW COURSES</button></a>
+        <a href="{% url "allcourses" %}"><button class="text-white border-0">VIEW COURSES</button></a>
     </div>
 </div>
 
-<div class='discount'>
+<div class='discount d-flex'>
     <div class='div1'>
         <h1>Up-to 15% Discount Offer For <br>Joining Today</h1>
         <p>The user can create dummy content in word paragraph list items and proposals. Depending on your requirement, a user can fit any of these formats in their project, which adds a lot of conveniences</p>
-        <a href="{% url "signup" %}"><button>REGISTER NOW</button></a>
+        <a href="{% url "signup" %}"><button class="border-0">REGISTER NOW</button></a>
     </div>
     <div class='div2'>
         <h1>Transform Your Life Through <br> Courses</h1>
         <p>The user can create dummy content in word paragraph list items and proposals. Depending on your requirement, a user can fit any of these formats in their project, which adds a lot of conveniences</p>
-        <a href="{% url "signup" %}"><button>REGISTER NOW</button></a>
+        <a href="{% url "signup" %}"><button class="border-0">REGISTER NOW</button></a>
     </div>
 </div>
 {% comment %} <section id="Quote-section">
@@ -43,10 +43,10 @@
     <button onclick="fetchQuote()">Get New Quote</button>
 </section> {% endcomment %}
 
-<div class='courses container'>
+<div class='courses text-center container'>
     <p>Popular Courses</p>
     <h1>Our Popular Courses</h1>
-    <div class='course-card' style>
+    <div class='course-card d-flex' style>
         {% for course in coursedata %}
         {% if forloop.counter <= 4 %}
 
@@ -68,14 +68,14 @@
         {% endif %}
         {% endfor %}
     </div>
-    <a href="{% url "allcourses" %}"><button>VIEW ALL</button></a>
+    <a href="{% url "allcourses" %}"><button class="text-white border-0">VIEW ALL</button></a>
 </div>
 <div class='text-center' style="background-color:#f0f3ff;padding:50px 0;margin:50px 0px 50px 0px;"id="Quote-section">
     <div class='class-header'>Quote:</div>
     <p class='card-body container' id="Quote-text">Loading...</p>
     <button class="btn btn-primary" onclick="fetchQuote()">Get New Quote</button>
 </div>
-<div class='feedback'>
+<div class='feedback text-center mx-auto'>
     <p>Feedback</p>
     <main style="" class="container d-flex">
         <div id="carouselExampleIndicators" class="carousel slide feedback-carousel" data-bs-ride="carousel" data-bs-interval="3000" style="">

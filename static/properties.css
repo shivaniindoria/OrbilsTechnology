@@ -1,10 +1,10 @@
 .absolute{
     position:absolute;
 }
-.disabled {
+.disabled-link {
     cursor: not-allowed;
     pointer-events: none;
 }
 .right{
-    float: right;
+    float:right;
 }
