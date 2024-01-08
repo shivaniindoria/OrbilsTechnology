@@ -14,5 +14,5 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'orbils_technology.settings')
 
 app = get_wsgi_application()
-WSGI_APPLICATION = 'vercel_app.wsgi.app'
+WSGI_APPLICATION = 'orbils_technology.wsgi.app'
 
