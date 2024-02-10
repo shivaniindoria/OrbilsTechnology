@@ -1,0 +1,321 @@
+*{
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.absolute{
+    position:absolute;
+}
+.disabled {
+    
+    text-decoration: none; 
+    cursor: not-allowed; 
+    pointer-events: none;
+  } 
+.right{
+    float: right;
+} 
+.home-bg-image{
+    width: 100%; 
+    height: 100vh;
+    background-image: url(static/images/homebg.png);
+    /* background-size:100vw 100vh; */
+    background-repeat: no-repeat;
+    /* z-index: 2; */
+    border-radius:0 0 300px 300px;
+}
+.login{
+    margin-right: 50px;
+}
+.header{
+    width: 100%; 
+    color: rgb(255, 255, 255);
+    /* word-spacing: 80px;  */
+    padding: 10px 0;  
+    font-size: 14px; 
+    text-align:center; 
+    /* position: absolute;  */
+    background-color: rgba(0, 81, 255, 0.411);
+}
+.header a{
+    color: white;
+    padding:0 25px;
+    font-size: 12px;
+}
+.header img{
+    width: 20px;
+}
+.main-header{
+    width: 80%;
+    margin-left:9%;
+    /* margin-right:auto; */
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: white;
+    top: 55px;
+}
+.link-bar{
+    padding-top: 20px;
+    width: 61%;
+    display: inline-block;
+}
+.logo{
+    padding-left: 10px;
+    width: 20%;
+    display: inline-block;
+}
+.home-link{
+    color: #000000;
+    padding: 20px 25px;
+}
+.search-bar{
+    
+    width: 60%;
+    margin-left: 20%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    text-align: center;
+    padding:20px 30px ;
+    position: relative;
+    top: -70px;
+    box-shadow: 5px 5px 10px 0px #888888;
+}
+.search-bar p{
+    font-size: 20px;
+    font-weight: 500;
+    margin:0 0 10px 0;
+}
+.search-bar input{
+    margin: 8px 10px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    width: 250px;
+    border: none;
+    font-size: medium;
+    background-color: rgb(233, 239, 243);
+}
+.search-bar button{
+    font-size: 14px;
+    margin: 8px 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    /* width: 130px; */
+    background-color: rgb(0, 81, 255);
+    color: white;
+    border: none;
+}
+.about-us{
+    /* height: 500px; */
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    padding: 20px 0 70px 90px;
+    margin: 20px 0 auto 0;
+}
+.image-div{
+    /* background-color: rgb
+    (49, 238, 32); */
+    display: inline-block;
+    height:400px;
+    width: 40%;
+    margin: 2px;
+}
+.image-div img{
+    /* box-shadow: 5px 5px 10px -10px rgba(187, 187, 187, 0.61); */
+    border-radius: 6px 6px 70px 6px;
+}
+.about-div{
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    margin: 30px 0 0 80px ;
+    height: 400px;
+    width: 43%;
+    text-align: left;
+}
+.about-div p{
+    /* width: fit-content; */
+    text-align: left;
+}
+.about-div button{
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 20px 0 0 0;
+    border: none;
+    background-color: rgb(0, 81, 255);
+    /* text-align: left; */
+    color: white;
+    font-size: 15px;
+}
+.l{
+    margin: 10px 0;
+    font-weight: 500;
+}
+.ex{
+    margin: 20px 0px;
+    font-size: larger;
+    font-weight: 650;
+}
+.heading{
+    font-size:30px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.about{
+    /* padding: 10px; */
+    color: orangered;
+    font-weight: 600;
+}
+.intro-line{
+    font-size: 17px;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    margin: 15px 0;
+    text-align: left;
+    color: #646363;
+    font-weight: 600;
+}
+.discount{
+    /* height: 350; */
+    background-color: rgb(14, 72, 119);
+    margin-top: 25px;
+    display: flex;
+}
+.discount p{
+    margin: 10px 0;
+    line-height: 30px;
+}
+.div1 p{
+    color: #777575;
+}
+.div1 button{
+    background-color: rgb(0, 81, 255);
+    color: white;
+    font-weight: 600;
+}
+.div2 button{
+    background-color: white;
+    color: orangered;
+    font-weight: 600
+}
+.div1{
+    display: inline-block;
+    /* height: 350px; */
+    background-color: #e0dbdb;
+    width: 47vw;
+    padding: 50px 30px 50px 80px;
+    font-size: large;
+    font-weight: 600;
+    /* color: #888888; */
+}
+
+.div2{
+    display: inline-block;
+    /* height: 350px; */
+    width: 50vw;
+    color: #ffffff;
+    padding: 50px 30px 50px 80px;
+    font-size: large;
+    font-weight: 600;
+}
+.discount button{
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 15px;
+    margin: 30px 0 0 0;
+    border: none;
+}
+
+.courses{
+    text-align:center ;
+    padding: 50px 0 0 0;
+}
+.courses p:nth-child(1){
+    color: orangered;
+    font-weight: 600;
+}
+.courses h1{
+    margin: 10px 0;
+}
+.course-card{
+    display: flex;
+    padding: 0 120px;
+    margin: 40px 0;
+
+}
+.card{
+    width: 350px;
+    height: 400px;
+    display: inline-block;
+    background-color: #fcfbfb;
+    margin: 0 8px;
+    border-radius: 10px;
+    border:  #e0dfdf 2px solid;
+    /* margin: auto; */
+}
+/* .card div:img{
+    width: 10px;
+} */
+.card img:not(.course-img) {
+    /* styles for all children inside div except the first one */
+    width: 18px;
+    float: left;
+    margin: 0 2px;
+  }
+.card div{
+    margin: 18px 10px 18px 10px;
+}
+  
+/* .card p:nth-of-type(1){
+    /* background-color: #e0dfdf; */
+    /* padding: 24px; */
+    /* text-align: left;
+    padding: 20px; */ 
+/* } */
+/* .card p:nth-of-type(2){
+    background-color: #e0dfdf;
+    padding: 10px;
+}
+.card span:nth-child(1){
+    float: left;
+    padding: 10px;
+}
+.card span:nth-child(2){
+    float: right;
+    padding: 10px; */
+/* } */
+.courses button{
+    background-color: rgb(0, 81, 255);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    margin: 20px;
+}
+.feedback{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    padding:  50px 0;
+}
+.feedback p:nth-of-type(1){
+    color: orangered;
+    font-weight: 600;
+}
+.feedback h1{
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+.footer{
+    height: 500px;
+    background-color: rgb(1, 35, 75);
+    color: #ffffff;
+}

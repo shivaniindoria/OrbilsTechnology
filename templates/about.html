@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<div>
+    <div class='search-bar'>
+        <p>What are you looking for at the course?</p>
+        <div>
+            <input type="text" placeholder="Search by Keyword" name="" id="">
+            <input type="select" name="" id="">
+            <button>SEARCH NOW</button>
+        </div>
+    </div>
+    <div class='about-us'> 
+        <div class='image-div'><img width=100% src="{% static "/images/office-work.png" %}" alt=""></div>
+        <div class='about-div'>
+            <p></p>
+            <p class='about'>About us</p>
+            <p class='heading'>Welcome To ORBILS Technology</p>
+            <p class='intro-line'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed does the eiusmod temper incident ut labore et dolore magna aliqua.</p>
+            <p class='l'>Administer with case</p>
+            <p class='l'>Save Time With Automation</p>
+            <p class='l'>30+ Courses</p>
+            <p class='ex'>*We Have 5+ Years of Working Experience</p>
+            <button>VIEW COURSES</button>
+        </div>
+    </div>
+</div> 
+
+<div class='discount'>
+    <div class='div1'>
+        <h1>Up-to 15% Discount Offer For <br>Joining Today</h1>
+        <p>The user can create dummy content in word paragraph list items and proposals. Depending on your requirement, a user can fit any of these formats in their project, which adds a lot of conveniences</p>
+        <button>REGISTER NOW</button>
+    </div>
+    <div class='div2'>
+        <h1>Transform Your Life Through <br> Courses</h1>
+        <p>The user can create dummy content in word paragraph list items and proposals. Depending on your requirement, a user can fit any of these formats in their project, which adds a lot of conveniences</p>
+        <button>REGISTER NOW</button>
+    </div>
+</div>
+
+<div class='courses'>
+    <p>Popular Courses</p>
+    <h1>Our Popular Courses</h1>
+    <div class='course-card'>
+        <div class='card'>
+            <img class= 'course-img' width=350px height=200px style='border-radius:8px 8px 0 0 ;' src="static/images/Projects.png" alt="wert">
+            <h2>Data Science</h2>
+            <div><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star2.png" %}" alt=""></div><br><br>
+            <p>Lorem ipsum dolor sit consectetur adipisicing eiusmo tempor</p>
+            <p><span>5k Students</span><span>13 Lessons</span></p>
+        </div>
+        <div class='card'>
+            <img class= 'course-img' width=350px height=200px style='border-radius:8px 8px 0 0 ;' src="static/images/Projects.png" alt="dfgh">
+            <h2>Full Stack Development</h2>
+            <div><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star2.png" %}" alt=""></div><br><br>
+            <p>Lorem ipsum dolor sit consectetur adipisicing eiusmo tempor</p>
+            <p><span>5k Students</span><span>13 Lessons</span></p>
+        </div>
+        <div class='card'>
+            <img class= 'course-img' width=350px height=200px style='border-radius:8px 8px 0 0 ;' src="static/images/Projects.png" alt="asdf">
+            <h2>App Development</h2>
+            <div><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star2.png" %}" alt=""></div><br><br>
+            <p>Lorem ipsum dolor sit consectetur adipisicing eiusmo tempor</p>
+            {% comment %} <p><span>5k Students</span><span>13 Lessons</span></p> {% endcomment %}
+        </div>
+        
+    </div>
+    <button>VIEW ALL</button>
+</div>
+
+<div class='feedback'>
+    <p>Feedback</p>
+    <main></main>
+</div>
+
+<div>
+    news letter
+</div>
+
+<div  class='footer'>
+    <p>i am footer</p>
+    <p></p>
+    <div></div>
+</div>
+{% endblock %}

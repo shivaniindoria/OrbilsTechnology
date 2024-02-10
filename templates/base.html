@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbils</title>
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    <script src="{% static "script.js" %}"></script>
+</head>
+<body>
+    <div class=' home-bg-image'>
+        <div class='header absolute'>
+            <a class='disabled' href=""><img src="" alt="">2364, Tehsil Camp, Panipat-132103, Haryana(India)</a>
+            <a class='disabled' href=""><img src="" alt="">orbilstechnology@gmail.com.com</a>
+            <a class='disabled' href=""><img src="" alt="">Mon-Fri: 10:00 am - 5:00 pm</a>
+            <a class='login disabled right' href=""><img src="" alt="">Login/Register</a>
+        </div>
+        <div class='main-header absolute'>
+            <div class='logo'><img width='200px' src="{% static "images/orbils-removebg.png" %}" alt=""></div>
+            <div class='link-bar right '>
+                <a class='home-link disabled' href="">About</a>
+                <a class='home-link disabled' href="">Courses</a>
+                <a class='home-link disabled' href="">Events</a>
+                <a class='home-link disabled' href="">Services</a>
+                <a class='home-link disabled' href="">Blog</a>
+                <a class='home-link disabled' href="">Contact Us</a>
+            </div>
+        </div>
+    </div> 
+    {% block content %}
+    {% endblock  %}
+
+</body>
+</html>
