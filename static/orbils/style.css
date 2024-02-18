@@ -6,18 +6,22 @@
     position:absolute;
 }
 .disabled {
-    
-    text-decoration: none; 
     cursor: not-allowed; 
     pointer-events: none;
-  } 
+} 
+.inline-block{
+    display:inline-block;
+}
+.link{
+    text-decoration: none; 
+}
 .right{
     float: right;
 } 
 .home-bg-image{
     width: 100%; 
     height: 100vh;
-    background-image: url(static/images/homebg.png);
+    background-image: url(/static/orbils/images/homebg.png);
     /* background-size:100vw 100vh; */
     background-repeat: no-repeat;
     /* z-index: 2; */
@@ -38,12 +42,12 @@
 }
 .header a{
     color: white;
-    padding:0 25px;
+    padding:1px 20px;
     font-size: 12px;
 }
-.header img{
-    width: 20px;
-}
+/* .header img{
+    width: 14px;
+} */
 .main-header{
     width: 80%;
     margin-left:9%;
@@ -128,7 +132,7 @@
 .about-div{
     background-color: rgb(255, 255, 255);
     display: inline-block;
-    margin: 30px 0 0 80px ;
+    margin: 0 0 0 80px ;
     height: 400px;
     width: 43%;
     text-align: left;
@@ -201,7 +205,7 @@
     display: inline-block;
     /* height: 350px; */
     background-color: #e0dbdb;
-    width: 47vw;
+    width: 50vw;
     padding: 50px 30px 50px 80px;
     font-size: large;
     font-weight: 600;

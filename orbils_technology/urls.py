@@ -16,9 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from orbils_technology import views
+# from orbils import views
+# from useraccount import views
+# from orbils_technology import views
+from orbils import views as orbils_views
+from useraccount import views as useraccount_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.about,name='about'),
+    path('', orbils_views.About,name='about'),
+    path('login/', useraccount_views.LoginView,name='login'),
+    path('logout/', useraccount_views.LogoutView,name='logout'),
+    path('signup/', useraccount_views.SignUpView,name='signup'),
 ]

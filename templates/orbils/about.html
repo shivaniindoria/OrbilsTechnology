@@ -1,6 +1,6 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "orbils/base.html" %}
 {% load static %}
+{% block content %}
 <div>
     <div class='search-bar'>
         <p>What are you looking for at the course?</p>
@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class='about-us'> 
-        <div class='image-div'><img width=100% src="{% static "/images/office-work.png" %}" alt=""></div>
+        <div class='image-div'><img width=100% src="{% static "orbils/images/office-work.png" %}" alt=""></div>
         <div class='about-div'>
             <p></p>
             <p class='about'>About us</p>
@@ -44,23 +44,27 @@
     <h1>Our Popular Courses</h1>
     <div class='course-card'>
         <div class='card'>
-            <img class= 'course-img' width=350px height=200px style='border-radius:8px 8px 0 0 ;' src="static/images/Projects.png" alt="wert">
+            <img class= 'course-img' width=350px height=200px style='border-radius:8px 8px 0 0 ;' src="{% static "orbils/images/Projects.png" %}" alt="wert">
             <h2>Data Science</h2>
-            <div><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star2.png" %}" alt=""></div><br><br>
+            <div><img src="{% static "orbils/images/star.png" %}" alt="">
+                <img src="{% static "orbils/images/star.png" %}" alt="">
+                <img src="{% static "orbils/images/star.png" %}" alt="">
+                <img src="{% static "orbils/images/star.png" %}" alt="">
+                <img src="{% static "orbils/images/star2.png" %}" alt=""></div><br><br>
             <p>Lorem ipsum dolor sit consectetur adipisicing eiusmo tempor</p>
             <p><span>5k Students</span><span>13 Lessons</span></p>
         </div>
         <div class='card'>
-            <img class= 'course-img' width=350px height=200px style='border-radius:8px 8px 0 0 ;' src="static/images/Projects.png" alt="dfgh">
+            <img class= 'course-img' width=350px height=200px style='border-radius:8px 8px 0 0 ;' src="{% static "orbils/images/Projects.png" %}" alt="dfgh">
             <h2>Full Stack Development</h2>
-            <div><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star2.png" %}" alt=""></div><br><br>
+            <div><img src="{% static "orbils/images/star.png" %}" alt=""><img src="{% static "orbils/images/star.png" %}" alt=""><img src="{% static "orbils/images/star.png" %}" alt=""><img src="{% static "orbils/images/star.png" %}" alt=""><img src="{% static "orbils/images/star2.png" %}" alt=""></div><br><br>
             <p>Lorem ipsum dolor sit consectetur adipisicing eiusmo tempor</p>
             <p><span>5k Students</span><span>13 Lessons</span></p>
         </div>
         <div class='card'>
-            <img class= 'course-img' width=350px height=200px style='border-radius:8px 8px 0 0 ;' src="static/images/Projects.png" alt="asdf">
+            <img class= 'course-img' width=350px height=200px style='border-radius:8px 8px 0 0 ;' src="{% static "orbils/images/Projects.png" %}" alt="asdf">
             <h2>App Development</h2>
-            <div><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star.png" %}" alt=""><img src="{% static "/images/star2.png" %}" alt=""></div><br><br>
+            <div><img src="{% static "orbils/images/star.png" %}" alt=""><img src="{% static "orbils/images/star.png" %}" alt=""><img src="{% static "orbils/images/star.png" %}" alt=""><img src="{% static "orbils/images/star.png" %}" alt=""><img src="{% static "orbils/images/star2.png" %}" alt=""></div><br><br>
             <p>Lorem ipsum dolor sit consectetur adipisicing eiusmo tempor</p>
             {% comment %} <p><span>5k Students</span><span>13 Lessons</span></p> {% endcomment %}
         </div>

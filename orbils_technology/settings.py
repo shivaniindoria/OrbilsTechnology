@@ -26,6 +26,9 @@ SECRET_KEY = 'django-insecure-$=g+az$b^6bbe)q3p4_2nr=%$a--b!v(vjzy_**an+&^a=$7%%
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# os.environ.get("SECRET_KEY")
+# int(os.environ.get("DEBUG", default=0))
+# os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
 
 # Application definition
@@ -37,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'orbils',
+    'useraccount',
 ]
 
 MIDDLEWARE = [
@@ -122,4 +127,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS=[BASE_DIR,'static']
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    "/var/www/static/",
+]
