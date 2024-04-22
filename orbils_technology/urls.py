@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
 # from orbils import views
 # from useraccount import views
 # from orbils_technology import views
@@ -38,5 +37,6 @@ urlpatterns = [
     path('signup/', useraccount_views.SignUpView,name='signup'),
     path("all-courses/orbils/course/<slug:myid>", orbils_views.CourseView, name="courseview"),
     path("all-courses/orbils/course/<slug:myid>/view-cart", orbils_views.CartView,name='cartview'),
+    path('payments/',include('payments.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

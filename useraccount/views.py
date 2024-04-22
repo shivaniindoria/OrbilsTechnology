@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from notifypy import Notify
+
 # Create your views here.
 def LoginView(request):
     if request.method == 'POST':
@@ -16,6 +18,7 @@ def LoginView(request):
             messages.error(request,'invalid username or password!')
             return redirect('login')
     return render(request,"useraccount/login.html")
+
 def SignUpView(request):
     if request.method == 'POST':
         firstname = request.POST['firstname']

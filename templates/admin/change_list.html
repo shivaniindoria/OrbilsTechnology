@@ -1,0 +1,20 @@
+<!-- templates/admin/change_list.html -->
+{% extends "admin/change_list.html" %}
+
+{% block result_list %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.field-status').each(function () {
+                if ($(this).text().trim() === 'Solved') {
+                    $(this).html('<div style="background-color: #41B06E; width:70px;text-align: center; padding: 5px; border-radius: 5px;">Solved</div>');
+                } else if ($(this).text().trim() === 'Pending') {
+                    $(this).html('<div style="background-color: lightyellow; color:black; width:70px;text-align: center; padding: 5px; border-radius: 5px;">Pending</div>');
+                } else if ($(this).text().trim() === 'New') {
+                    $(this).html('<div style="background-color: #E72929; width:70px;text-align: center; padding: 5px; border-radius: 5px;">New</div>');
+                }
+            });
+        });
+    </script>
+    {{ block.super }}
+{% endblock %}

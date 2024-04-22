@@ -1,7 +1,12 @@
 from django.db import models
-
+from django.utils import timezone
 # Create your models here.
 class Contact(models.Model):
+    STATUS_CHOICES = (
+        ('Solved', 'Solved'),
+        ('Pending', 'Pending'),
+        ('New', 'New'),
+    )
     # msg_id = models.AutoField(primary_key=True)
     firstname = models.CharField(max_length=10)
     lastname = models.CharField(max_length=10)
@@ -14,6 +19,8 @@ class Contact(models.Model):
     state = models.CharField(max_length=20, default="")
     city = models.CharField(max_length=20, default="")
     zip = models.IntegerField(default="0")
+    query_time = models.DateTimeField(default=timezone.now)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='New')
 
 #change name of product in db list
     def __str__(self):

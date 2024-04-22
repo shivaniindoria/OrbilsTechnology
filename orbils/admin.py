@@ -3,13 +3,16 @@ from django.utils.html import format_html
 
 # Register your models here.
 from .models import Contact , Courses , CartItem
-admin.site.register(Contact)
+
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('firstname', 'email', 'number', 'state', 'city', 'query_time', 'status')
+admin.site.register(Contact, ContactAdmin)
 admin.site.register(CartItem)
 
 class CoursesAdmin(admin.ModelAdmin):
     list_display = ('coursename', 'shortdescription','display_image','category', 'original_price','discounted_price')
     search_fields = ('coursename', 'shortdescription','category')
-    list_filter = ('category',)  # Add filters for 'created_at' field
+    list_filter = ('category','coursename','discounted_price')  # Add filters for 'created_at' field
 
     # readonly_fields = ['display_image']
     def display_image(self, obj):
